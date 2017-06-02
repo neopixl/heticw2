@@ -11,6 +11,10 @@ import Haneke
 
 class EpisodeTableViewCell: UITableViewCell {
 
+	enum Style {
+		case one, two
+	}
+	
 	static let identifier = "episode_cell_identifier"
 	
 	@IBOutlet weak var episodeImageView: UIImageView!
@@ -28,5 +32,28 @@ class EpisodeTableViewCell: UITableViewCell {
 			}
 		}
 	}
+	
+	var style: Style! {
+		didSet {
+			if let currentStyle = style {
+				switch currentStyle {
+				case .one:
+					self.contentView.backgroundColor = UIColor.lightGray
+					break
+				case .two:
+					self.contentView.backgroundColor = UIColor.darkGray
+					break
+				default:
+					break
+				}
+			}
+			
+			
+		}
+	}
+	
+	
+	
+	
 
 }

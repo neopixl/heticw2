@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	static let identifier = "login_view_controller"
+	
 	@IBOutlet weak var textFieldUserName: UITextField!
 	@IBOutlet weak var textFieldPassWord: UITextField!
 	
@@ -37,6 +39,8 @@ class ViewController: UIViewController {
 		if username.isEmpty || password.isEmpty {
 			showAlert(title: "Erreur", message: "Veuillez remplir le nom d'utilisateur et le mot de passe, s'il vous plaît ?")
 		} else {
+			
+			LoginUtil.storeCredential(credential: (username: username, password: password))
 			
 			// Afficher la vue Liste des épisodes
 			

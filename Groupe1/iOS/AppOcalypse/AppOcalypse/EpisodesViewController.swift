@@ -118,6 +118,9 @@ extension EpisodesViewController: UITableViewDataSource {
 		
 		episodeCell.episode = episode
 		
+		//let index = indexPath.row
+		//episodeCell.style = index%2==0 ? .one : .two
+		
 		return episodeCell
 	}
 	
