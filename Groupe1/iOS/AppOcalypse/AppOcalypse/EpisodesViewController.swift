@@ -46,15 +46,40 @@ class EpisodesViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+		
+		if let segueIdentifier = segue.identifier {
+			
+			switch segueIdentifier {
+			case EpisodeDetailViewController.segueIdentifier:
+				
+				// 📺 ?
+				
+				if let indexPath = episodesTableView.indexPathForSelectedRow {
+					
+					let episode = allEpisodes[indexPath.row]
+					
+					//  viewController qui sera affiché
+					let episodeDetailViewController = segue.destination as! EpisodeDetailViewController
+					
+					// On lui transfère l'objet
+					episodeDetailViewController.episode = episode
+					
+				}
+				break
+			default:
+				
+				break
+			}
+			
+		}
     }
-    */
+	
 
 }
 
