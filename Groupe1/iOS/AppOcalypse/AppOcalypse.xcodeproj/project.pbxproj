@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E56C83D68B2A0D948572D275 /* Pods_AppOcalypse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6D6EC88B8712E90A53D6D /* Pods_AppOcalypse.framework */; };
 		EF88517A1EDEBE4000522E59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8851791EDEBE4000522E59 /* AppDelegate.swift */; };
 		EF88517C1EDEBE4000522E59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88517B1EDEBE4000522E59 /* ViewController.swift */; };
 		EF88517F1EDEBE4000522E59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF88517D1EDEBE4000522E59 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B6D6EC88B8712E90A53D6D /* Pods_AppOcalypse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppOcalypse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5EA2AF9BDFAFD81F04F8CB /* Pods-AppOcalypse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppOcalypse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppOcalypse/Pods-AppOcalypse.debug.xcconfig"; sourceTree = "<group>"; };
 		EF8851761EDEBE4000522E59 /* AppOcalypse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOcalypse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8851791EDEBE4000522E59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF88517B1EDEBE4000522E59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		EF88518D1EDEF4C200522E59 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		EF88518F1EDEFC4900522E59 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		EFC645E21EE1564300AE47BC /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		F03815350A7B9AEB6F15487A /* Pods-AppOcalypse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppOcalypse.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppOcalypse/Pods-AppOcalypse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56C83D68B2A0D948572D275 /* Pods_AppOcalypse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CF4B33A230A91B6445C20FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB5EA2AF9BDFAFD81F04F8CB /* Pods-AppOcalypse.debug.xcconfig */,
+				F03815350A7B9AEB6F15487A /* Pods-AppOcalypse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4D342BB2FBC0D56818CBC8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00B6D6EC88B8712E90A53D6D /* Pods_AppOcalypse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF88516D1EDEBE4000522E59 = {
 			isa = PBXGroup;
 			children = (
 				EF8851781EDEBE4000522E59 /* AppOcalypse */,
 				EF8851771EDEBE4000522E59 /* Products */,
+				1CF4B33A230A91B6445C20FD /* Pods */,
+				C4D342BB2FBC0D56818CBC8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF8851881EDEBE4000522E59 /* Build configuration list for PBXNativeTarget "AppOcalypse" */;
 			buildPhases = (
+				0E9A33B17594FEF997742890 /* [CP] Check Pods Manifest.lock */,
 				EF8851721EDEBE4000522E59 /* Sources */,
 				EF8851731EDEBE4000522E59 /* Frameworks */,
 				EF8851741EDEBE4000522E59 /* Resources */,
+				41D7B840D78D7A5F99D57716 /* [CP] Embed Pods Frameworks */,
+				33D1966CCEB0DFD8C6EDD510 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,6 +169,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E9A33B17594FEF997742890 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33D1966CCEB0DFD8C6EDD510 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppOcalypse/Pods-AppOcalypse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41D7B840D78D7A5F99D57716 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppOcalypse/Pods-AppOcalypse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF8851721EDEBE4000522E59 /* Sources */ = {
@@ -274,6 +349,7 @@
 		};
 		EF8851891EDEBE4000522E59 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5EA2AF9BDFAFD81F04F8CB /* Pods-AppOcalypse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AppOcalypse/Info.plist;
@@ -286,6 +362,7 @@
 		};
 		EF88518A1EDEBE4000522E59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F03815350A7B9AEB6F15487A /* Pods-AppOcalypse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AppOcalypse/Info.plist;
