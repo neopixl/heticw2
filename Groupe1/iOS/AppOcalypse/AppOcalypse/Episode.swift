@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Episode {
 	
@@ -23,6 +24,32 @@ class Episode {
 		self.name = name
 	}
 	
+}
+
+extension Episode {
+	
+	convenience init(json: JSON) {
+		self.init()
+		
+		self.name = json["name"].stringValue
+		self.summary = json["summary"].stringValue
+		self.thumbnailImageUrl = json["image"]["medium"].stringValue.replacingOccurrences(of: "http", with: "https")
+		self.originalImageUrl = json["image"]["original"].stringValue.replacingOccurrences(of: "http", with: "https")
+		
+	}
+	
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+

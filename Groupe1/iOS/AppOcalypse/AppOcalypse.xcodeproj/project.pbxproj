@@ -17,6 +17,8 @@
 		EF88518E1EDEF4C200522E59 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88518D1EDEF4C200522E59 /* EpisodeTableViewCell.swift */; };
 		EF8851901EDEFC4900522E59 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF88518F1EDEFC4900522E59 /* Episode.swift */; };
 		EFC645E31EE1564300AE47BC /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC645E21EE1564300AE47BC /* EpisodeDetailViewController.swift */; };
+		EFC645E51EE17ED000AE47BC /* EpisodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC645E41EE17ED000AE47BC /* EpisodeService.swift */; };
+		EFC645E71EE18CE300AE47BC /* UIViewController+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC645E61EE18CE300AE47BC /* UIViewController+Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		EF88518D1EDEF4C200522E59 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		EF88518F1EDEFC4900522E59 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		EFC645E21EE1564300AE47BC /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		EFC645E41EE17ED000AE47BC /* EpisodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeService.swift; sourceTree = "<group>"; };
+		EFC645E61EE18CE300AE47BC /* UIViewController+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Util.swift"; sourceTree = "<group>"; };
 		F03815350A7B9AEB6F15487A /* Pods-AppOcalypse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppOcalypse.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppOcalypse/Pods-AppOcalypse.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +100,8 @@
 				EF88518D1EDEF4C200522E59 /* EpisodeTableViewCell.swift */,
 				EF88518F1EDEFC4900522E59 /* Episode.swift */,
 				EFC645E21EE1564300AE47BC /* EpisodeDetailViewController.swift */,
+				EFC645E41EE17ED000AE47BC /* EpisodeService.swift */,
+				EFC645E61EE18CE300AE47BC /* UIViewController+Util.swift */,
 			);
 			path = AppOcalypse;
 			sourceTree = "<group>";
@@ -226,6 +232,8 @@
 				EF88518C1EDEEABE00522E59 /* EpisodesViewController.swift in Sources */,
 				EFC645E31EE1564300AE47BC /* EpisodeDetailViewController.swift in Sources */,
 				EF88518E1EDEF4C200522E59 /* EpisodeTableViewCell.swift in Sources */,
+				EFC645E51EE17ED000AE47BC /* EpisodeService.swift in Sources */,
+				EFC645E71EE18CE300AE47BC /* UIViewController+Util.swift in Sources */,
 				EF88517C1EDEBE4000522E59 /* ViewController.swift in Sources */,
 				EF8851901EDEFC4900522E59 /* Episode.swift in Sources */,
 				EF88517A1EDEBE4000522E59 /* AppDelegate.swift in Sources */,

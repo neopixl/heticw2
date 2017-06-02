@@ -65,24 +65,6 @@ class ViewController: UIViewController {
 	@IBAction func signUp(_ sender: Any) {
 		
 	}
-	
-	// MARK: - Private methods
-	
-	private func showAlert(title: String, message: String) {
-		let alertController = UIAlertController(title: title,
-		                                        message: message,
-		                                        preferredStyle: .alert)
-		// UIAlertAction = bouton pour UIAlertController
-		alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-		
-		self.present(alertController, animated: true, completion: {
-			print("alerte affichée")
-		})
-		
-	}
-	
-	
-	
 
 
 }

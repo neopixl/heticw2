@@ -20,6 +20,21 @@ class EpisodesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		EpisodeService.retrieveEpisodes(idTvShow: 73,
+		                                success: { (episodes) in
+											
+											self.allEpisodes.removeAll()
+											self.allEpisodes += episodes
+											
+											// Refresh UI
+											self.episodesTableView.reloadData()
+											
+		}) { (error) in
+			self.showAlert(title: "Erreur",
+			               message: error.localizedDescription)
+		}
+		
+		/*
 		allEpisodes.append(Episode(name: "Les noces pourpres"))
 		allEpisodes.append(Episode(name: "La mouche"))
 		allEpisodes.append(Episode(name: "A new beginning"))
@@ -36,6 +51,7 @@ class EpisodesViewController: UIViewController {
 		allEpisodes.append(Episode(name: "Tick tick tick"))
 		allEpisodes.append(Episode(name: "Reckoning"))
 		allEpisodes.append(Episode(name: "The reign of Castamere"))
+		*/
 		
 		
     }
@@ -62,6 +78,8 @@ class EpisodesViewController: UIViewController {
 				
 				if let indexPath = episodesTableView.indexPathForSelectedRow {
 					
+					episodesTableView.deselectRow(at: indexPath, animated: true)
+					
 					let episode = allEpisodes[indexPath.row]
 					
 					//  viewController qui sera affiché
@@ -79,7 +97,6 @@ class EpisodesViewController: UIViewController {
 			
 		}
     }
-	
 
 }
 

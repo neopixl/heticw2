@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class EpisodeTableViewCell: UITableViewCell {
 
@@ -22,8 +23,9 @@ class EpisodeTableViewCell: UITableViewCell {
 		didSet {
 			// Refresh UI
 			episodeNameLabel.text = episode.name
-			
-			
+			if let url = URL(string: episode.thumbnailImageUrl) {
+				episodeImageView.hnk_setImageFromURL(url)
+			}
 		}
 	}
 
