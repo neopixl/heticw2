@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.4.0)
+  - HanekeSwift (0.10.1)
+  - KeychainAccess (3.0.1)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - HanekeSwift (from `https://github.com/Haneke/HanekeSwift.git`, branch `feature/swift-3`)
+  - KeychainAccess
+  - SwiftyJSON (~> 3.1)
+
+EXTERNAL SOURCES:
+  HanekeSwift:
+    :branch: feature/swift-3
+    :git: https://github.com/Haneke/HanekeSwift.git
+
+CHECKOUT OPTIONS:
+  HanekeSwift:
+    :commit: 2f6d87f1f725d204d85cb34492e8c399cd5a200f
+    :git: https://github.com/Haneke/HanekeSwift.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  HanekeSwift: 4113367892828e7700d24a384027de6ebc79aad1
+  KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 3f0d4e239928bdadef623754df15bce86c4f1f63
+
+COCOAPODS: 1.2.0
