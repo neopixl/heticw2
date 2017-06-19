@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Appsurde</string>
+    <string name="login_label_button">Login</string>
+    <string name="placeholder_email">Email address?</string>
+    <string name="signup_label_button">Signup</string>
+    <string name="placeholder_password">Mot de passe ?</string>
+</resources>

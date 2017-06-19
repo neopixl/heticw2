@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Appsurde</string>
+    <string name="placeholder_email">Adresse e-mail ?</string>
+    <string name="login_label_button">Se connecter</string>
+    <string name="signup_label_button">S\'enregistrer</string>
+    <string name="placeholder_password">Mot de passe ?</string>
+    <string name="success">Information</string>
+    <string name="login_ok">Vous êtes connecté.</string>
+    <string name="login_failed">Vous avez faisandé vos informations de connexion.</string>
+</resources>
