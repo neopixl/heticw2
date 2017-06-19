@@ -1,5 +1,6 @@
 package com.neopixl.appsurde;
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +46,17 @@ public class LoginActivity extends AppCompatActivity {
                 && !password.isEmpty();
 
         if(credentialsAreNotEmpty) {
-            showSnackBar(R.string.login_ok);
+            //showSnackBar(R.string.login_ok);
+
+            // Lancer le nouvel écran (EpisodesActivity)
+
+            Intent intent = new Intent(this,
+                    EpisodesActivity.class);
+            startActivity(intent);
+
+            // Pour tuer l'écran actuel
+            finish();
+
         } else {
             showSnackBar(R.string.login_failed);
         }
