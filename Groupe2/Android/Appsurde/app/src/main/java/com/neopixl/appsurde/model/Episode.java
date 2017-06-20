@@ -11,6 +11,8 @@ public class Episode {
     private String name;
     private String summary;
 
+    private Image image;
+
     // utile pour le Parsing JSON
     public Episode() {
 
@@ -36,5 +38,13 @@ public class Episode {
 
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
     }
 }

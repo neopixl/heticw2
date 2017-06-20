@@ -2,8 +2,10 @@ package com.neopixl.appsurde.item;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.mikepenz.fastadapter.items.AbstractItem;
 import com.neopixl.appsurde.R;
 import com.neopixl.appsurde.model.Episode;
@@ -55,6 +57,9 @@ public class EpisodeItem extends AbstractItem<EpisodeItem, EpisodeItem.EpisodeVi
         @BindView(R.id.row_episode_title_textview)
         protected TextView titleTextView;
 
+        @BindView(R.id.row_episode_imageview)
+        protected ImageView imageView;
+
         // itemView = vue récupérée depuis la cache
         public EpisodeViewHolder(View itemView) {
             super(itemView);
@@ -65,6 +70,13 @@ public class EpisodeItem extends AbstractItem<EpisodeItem, EpisodeItem.EpisodeVi
 
         public void refresh(Episode episode) {
             titleTextView.setText(episode.getName());
+
+            imageView.setImageDrawable(null);
+
+            // Affichage de l'image
+            Glide.with(itemView)
+                    .load(episode.getImage().getMedium())
+                    .into(imageView);
         }
     }
 
