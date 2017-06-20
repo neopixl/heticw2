@@ -1,14 +1,15 @@
 package com.neopixl.appsurde.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Created by Yvan Moté on 19/06/2017.
  */
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Episode {
     private String name;
     private String summary;
-
-
 
     // utile pour le Parsing JSON
     public Episode() {

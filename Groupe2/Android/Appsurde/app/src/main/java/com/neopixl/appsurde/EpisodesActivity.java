@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.android.volley.VolleyError;
 import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter;
 import com.neopixl.appsurde.item.EpisodeItem;
 import com.neopixl.appsurde.model.Episode;
+import com.neopixl.appsurde.network.EpisodeService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,11 +66,26 @@ public class EpisodesActivity extends AppCompatActivity {
         // Adapter = la classe qui retournera les cellules à la RecyclerView
         episodesItemAdapter = new FastItemAdapter<EpisodeItem>();
 
-        for(Episode episode : episodesList) {
+        EpisodeService.retrieveEpisodes(73, new EpisodeService.EpisodeServiceListener() {
+            @Override
+            public void onReceiveEpisodes(List<Episode> episodes) {
+                for(Episode episode : episodes) {
+                    episodesItemAdapter.add(new EpisodeItem(episode));
+                }
+            }
 
+            @Override
+            public void onFailed(VolleyError error) {
+                // afficher une SnackBar
+            }
+        });
+
+        /*
+        for(Episode episode : episodesList) {
             EpisodeItem item = new EpisodeItem(episode);
             episodesItemAdapter.add(item);
         }
+        */
 
         // Créer le LayoutManager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,
