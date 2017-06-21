@@ -46,7 +46,16 @@ class ViewController: UIViewController {
 			let credentialsAreNotEmpty = !login.isEmpty && !password.isEmpty
 			
 			if credentialsAreNotEmpty {
-				showAlert("Vous êtes connecté !")
+				
+				//showAlert("Vous êtes connecté !")
+				
+				// Pour charger le ViewController : EpisodesViewController
+				if let episodesViewController = self.storyboard?.instantiateViewController(withIdentifier: EpisodesViewController.identifier) {
+					self.present(episodesViewController, animated: true, completion: nil)
+				}
+				
+				
+				
 			} else {
 				
 			}
