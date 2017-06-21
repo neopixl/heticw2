@@ -1,14 +1,22 @@
-package com.neopixl.appsurde;
+package com.neopixl.appsurde.activity;
 
+import android.content.Intent;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.android.volley.VolleyError;
+import com.mikepenz.fastadapter.FastAdapter;
+import com.mikepenz.fastadapter.IAdapter;
 import com.mikepenz.fastadapter.commons.adapters.FastItemAdapter;
+import com.neopixl.appsurde.R;
 import com.neopixl.appsurde.item.EpisodeItem;
 import com.neopixl.appsurde.model.Episode;
+import com.neopixl.appsurde.model.Image;
 import com.neopixl.appsurde.network.EpisodeService;
 
 import java.util.ArrayList;
@@ -34,35 +42,6 @@ public class EpisodesActivity extends AppCompatActivity {
 
         episodesList = new ArrayList<Episode>();
 
-        // Création des épisodes
-
-        episodesList.add(new Episode("Les noces rouges",
-                "Ca va saigner"));
-        episodesList.add(new Episode("La mouche",
-                "Satané mouche"));
-        episodesList.add(new Episode("Le retour du Jedi",
-                "Il est de retour"));
-        episodesList.add(new Episode("First Blood",
-                "Rambo est là"));
-        episodesList.add(new Episode("Les rivières pourpres",
-                "Des meurtres de sang froid."));
-        episodesList.add(new Episode("Beetlejuice",
-                "Beetlejuice, Beetlejuice, Beetlejuice!"));
-        episodesList.add(new Episode("Narcos", ""));
-        episodesList.add(new Episode("Le parrain II", ""));
-        episodesList.add(new Episode("Le retour de la momie", ""));
-        episodesList.add(new Episode("Les bronzés font du ski", ""));
-        episodesList.add(new Episode("Les deux tours de la présidentielle", ""));
-        episodesList.add(new Episode("Le retour de Murdock", "Mac Gyver"));
-        episodesList.add(new Episode("Rick Hunter", ""));
-        episodesList.add(new Episode("Fantomas contre Scotland Yard", ""));
-        episodesList.add(new Episode("Princesse Mononoke", ""));
-        episodesList.add(new Episode("Charlie et la chocolaterie", ""));
-        episodesList.add(new Episode("Inception", ""));
-        episodesList.add(new Episode("Dikenek",
-                "M'man je n'ai rien su faire, je me suis faire carjacker."));
-
-
         // Adapter = la classe qui retournera les cellules à la RecyclerView
         episodesItemAdapter = new FastItemAdapter<EpisodeItem>();
 
@@ -80,12 +59,32 @@ public class EpisodesActivity extends AppCompatActivity {
             }
         });
 
-        /*
-        for(Episode episode : episodesList) {
-            EpisodeItem item = new EpisodeItem(episode);
-            episodesItemAdapter.add(item);
-        }
-        */
+        episodesItemAdapter.withOnClickListener(new FastAdapter.OnClickListener<EpisodeItem>() {
+            @Override
+            public boolean onClick(View v,
+                                   IAdapter<EpisodeItem> adapter,
+                                   EpisodeItem item,
+                                   int position) {
+
+                ImageView imageViewOrigin = item.getImageView();
+
+                Episode episode = item.getEpisode();
+
+                Intent intent = DetailEpisodeActivity.createIntent(EpisodesActivity.this,
+                        episode);
+
+                String transitionName = getString(R.string.transition_to_detail);
+
+                ActivityOptionsCompat options =
+                        ActivityOptionsCompat
+                                .makeSceneTransitionAnimation(EpisodesActivity.this,
+                                        imageViewOrigin, transitionName);
+
+                startActivity(intent, options.toBundle());
+
+                return true;
+            }
+        });
 
         // Créer le LayoutManager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,

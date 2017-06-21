@@ -1,5 +1,8 @@
 package com.neopixl.appsurde.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
@@ -7,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Episode {
+public class Episode implements Parcelable {
     private String name;
     private String summary;
 
@@ -23,6 +26,36 @@ public class Episode {
         this.name = name;
         this.summary = summary;
     }
+
+    protected Episode(Parcel in) {
+        name = in.readString();
+        summary = in.readString();
+        image = in.readParcelable(Image.class.getClassLoader());
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(summary);
+        dest.writeParcelable(image, flags);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Episode> CREATOR = new Creator<Episode>() {
+        @Override
+        public Episode createFromParcel(Parcel in) {
+            return new Episode(in);
+        }
+
+        @Override
+        public Episode[] newArray(int size) {
+            return new Episode[size];
+        }
+    };
 
     public String getName() {
         return name;

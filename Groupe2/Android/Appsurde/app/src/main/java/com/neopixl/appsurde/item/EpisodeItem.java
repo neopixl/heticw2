@@ -24,6 +24,8 @@ public class EpisodeItem extends AbstractItem<EpisodeItem, EpisodeItem.EpisodeVi
 
     private Episode episode;
 
+    private EpisodeViewHolder holder;
+
     public EpisodeItem(Episode episode) {
         this.episode = episode;
     }
@@ -48,7 +50,17 @@ public class EpisodeItem extends AbstractItem<EpisodeItem, EpisodeItem.EpisodeVi
     public void bindView(EpisodeViewHolder holder, List<Object> payloads) {
         super.bindView(holder, payloads);
 
+        this.holder = holder;
+
         holder.refresh(episode);
+    }
+
+    public Episode getEpisode() {
+        return episode;
+    }
+
+    public ImageView getImageView() {
+        return holder.getImageView();
     }
 
     // Cellule recyclable
@@ -77,6 +89,10 @@ public class EpisodeItem extends AbstractItem<EpisodeItem, EpisodeItem.EpisodeVi
             Glide.with(itemView)
                     .load(episode.getImage().getMedium())
                     .into(imageView);
+        }
+
+        public ImageView getImageView() {
+            return imageView;
         }
     }
 

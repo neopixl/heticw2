@@ -7,4 +7,5 @@
     <string name="success">Information</string>
     <string name="login_ok">Vous êtes connecté.</string>
     <string name="login_failed">Vous avez faisandé vos informations de connexion.</string>
+    <string name="transition_to_detail">transition_episode_detail</string>
 </resources>
