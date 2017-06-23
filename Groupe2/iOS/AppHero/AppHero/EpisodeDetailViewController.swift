@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class EpisodeDetailViewController: UIViewController {
 
@@ -24,7 +25,13 @@ class EpisodeDetailViewController: UIViewController {
         
         // Affichage de l'image 
         
+        if let url = URL(string: episode.bigImage) {
+            imageView.hnk_setImageFromURL(url)
+        }
+        
         //Affichage du contenu web
+        
+        webView.loadHTMLString(episode.summary, baseURL: nil)
         
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAEA9E50165E6210C34FDD75 /* Pods_AppHero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829FEAC43A22D22A31926D09 /* Pods_AppHero.framework */; };
 		EF057B661EFA732B00A19337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF057B651EFA732B00A19337 /* AppDelegate.swift */; };
 		EF057B681EFA732B00A19337 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF057B671EFA732B00A19337 /* ViewController.swift */; };
 		EF057B6B1EFA732B00A19337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF057B691EFA732B00A19337 /* Main.storyboard */; };
@@ -16,9 +17,14 @@
 		EF057B7A1EFAA6CD00A19337 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF057B791EFAA6CD00A19337 /* Episode.swift */; };
 		EF057B7C1EFAAB9F00A19337 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF057B7B1EFAAB9F00A19337 /* EpisodeTableViewCell.swift */; };
 		EF46FBD91EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46FBD81EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift */; };
+		EF46FBDB1EFD138C00D5DFFB /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46FBDA1EFD138C00D5DFFB /* UrlBuilder.swift */; };
+		EF46FBDD1EFD14CD00D5DFFB /* EpisodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46FBDC1EFD14CD00D5DFFB /* EpisodeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3229A09792589A8A89BB9D8A /* Pods-AppHero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppHero.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppHero/Pods-AppHero.debug.xcconfig"; sourceTree = "<group>"; };
+		829FEAC43A22D22A31926D09 /* Pods_AppHero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppHero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F4DE6847BEF56D8C4F4505 /* Pods-AppHero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppHero.release.xcconfig"; path = "Pods/Target Support Files/Pods-AppHero/Pods-AppHero.release.xcconfig"; sourceTree = "<group>"; };
 		EF057B621EFA732B00A19337 /* AppHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF057B651EFA732B00A19337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF057B671EFA732B00A19337 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		EF057B791EFAA6CD00A19337 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		EF057B7B1EFAAB9F00A19337 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
 		EF46FBD81EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		EF46FBDA1EFD138C00D5DFFB /* UrlBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
+		EF46FBDC1EFD14CD00D5DFFB /* EpisodeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAEA9E50165E6210C34FDD75 /* Pods_AppHero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6847EAE00B173F7B4EFE441E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				829FEAC43A22D22A31926D09 /* Pods_AppHero.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9176301AE832EBE9F7547036 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3229A09792589A8A89BB9D8A /* Pods-AppHero.debug.xcconfig */,
+				D3F4DE6847BEF56D8C4F4505 /* Pods-AppHero.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF057B591EFA732B00A19337 = {
 			isa = PBXGroup;
 			children = (
 				EF057B641EFA732B00A19337 /* AppHero */,
 				EF057B631EFA732B00A19337 /* Products */,
+				9176301AE832EBE9F7547036 /* Pods */,
+				6847EAE00B173F7B4EFE441E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +100,8 @@
 				EF057B791EFAA6CD00A19337 /* Episode.swift */,
 				EF057B7B1EFAAB9F00A19337 /* EpisodeTableViewCell.swift */,
 				EF46FBD81EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift */,
+				EF46FBDA1EFD138C00D5DFFB /* UrlBuilder.swift */,
+				EF46FBDC1EFD14CD00D5DFFB /* EpisodeService.swift */,
 			);
 			path = AppHero;
 			sourceTree = "<group>";
@@ -83,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF057B741EFA732B00A19337 /* Build configuration list for PBXNativeTarget "AppHero" */;
 			buildPhases = (
+				6C903ADA9753AD6887652807 /* [CP] Check Pods Manifest.lock */,
 				EF057B5E1EFA732B00A19337 /* Sources */,
 				EF057B5F1EFA732B00A19337 /* Frameworks */,
 				EF057B601EFA732B00A19337 /* Resources */,
+				4B9187BD3D4346B27605B13B /* [CP] Embed Pods Frameworks */,
+				37E1F95B82DC692F64580E52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,16 +176,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37E1F95B82DC692F64580E52 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppHero/Pods-AppHero-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B9187BD3D4346B27605B13B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AppHero/Pods-AppHero-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C903ADA9753AD6887652807 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF057B5E1EFA732B00A19337 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EF057B781EFA98A400A19337 /* EpisodesViewController.swift in Sources */,
+				EF46FBDD1EFD14CD00D5DFFB /* EpisodeService.swift in Sources */,
 				EF46FBD91EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift in Sources */,
 				EF057B7A1EFAA6CD00A19337 /* Episode.swift in Sources */,
 				EF057B681EFA732B00A19337 /* ViewController.swift in Sources */,
 				EF057B7C1EFAAB9F00A19337 /* EpisodeTableViewCell.swift in Sources */,
+				EF46FBDB1EFD138C00D5DFFB /* UrlBuilder.swift in Sources */,
 				EF057B661EFA732B00A19337 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +357,7 @@
 		};
 		EF057B751EFA732B00A19337 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3229A09792589A8A89BB9D8A /* Pods-AppHero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AppHero/Info.plist;
@@ -286,6 +370,7 @@
 		};
 		EF057B761EFA732B00A19337 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F4DE6847BEF56D8C4F4505 /* Pods-AppHero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AppHero/Info.plist;

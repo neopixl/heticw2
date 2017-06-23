@@ -19,6 +19,7 @@ class EpisodesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /*
 		allEpisodes.append(Episode(name: "Les noces rouges"))
 		allEpisodes.append(Episode(name: "La mouche"))
 		allEpisodes.append(Episode(name: "La chenille ne tombe jamais seule"))
@@ -36,8 +37,20 @@ class EpisodesViewController: UIViewController {
 		allEpisodes.append(Episode(name: "Merci Patron"))
 		allEpisodes.append(Episode(name: "Old Boy"))
 		allEpisodes.append(Episode(name: "Gone Girl"))
+        */
 		
 		
+        EpisodeService.retrieveEpisodes(showId: 73, result: { (episodes) in
+            
+            self.allEpisodes.removeAll()
+            self.allEpisodes += episodes
+            
+            // Recharge la TableView (liste graphique)
+            self.episodesTableView.reloadData()
+            
+        }) { (errorCode) in
+            
+        }
 		
 		
     }
