@@ -15,6 +15,7 @@
 		EF057B781EFA98A400A19337 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF057B771EFA98A400A19337 /* EpisodesViewController.swift */; };
 		EF057B7A1EFAA6CD00A19337 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF057B791EFAA6CD00A19337 /* Episode.swift */; };
 		EF057B7C1EFAAB9F00A19337 /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF057B7B1EFAAB9F00A19337 /* EpisodeTableViewCell.swift */; };
+		EF46FBD91EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46FBD81EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EF057B771EFA98A400A19337 /* EpisodesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		EF057B791EFAA6CD00A19337 /* Episode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		EF057B7B1EFAAB9F00A19337 /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		EF46FBD81EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				EF057B771EFA98A400A19337 /* EpisodesViewController.swift */,
 				EF057B791EFAA6CD00A19337 /* Episode.swift */,
 				EF057B7B1EFAAB9F00A19337 /* EpisodeTableViewCell.swift */,
+				EF46FBD81EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift */,
 			);
 			path = AppHero;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF057B781EFA98A400A19337 /* EpisodesViewController.swift in Sources */,
+				EF46FBD91EFCFBBC00D5DFFB /* EpisodeDetailViewController.swift in Sources */,
 				EF057B7A1EFAA6CD00A19337 /* Episode.swift in Sources */,
 				EF057B681EFA732B00A19337 /* ViewController.swift in Sources */,
 				EF057B7C1EFAAB9F00A19337 /* EpisodeTableViewCell.swift in Sources */,
@@ -311,6 +315,7 @@
 				EF057B761EFA732B00A19337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
