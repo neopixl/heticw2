@@ -15,13 +15,27 @@ class EpisodeDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var webView: UIWebView!
     
+    @IBOutlet weak var tvShowTitleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var seasonNumberLabel: UILabel!
+ 
     var episode: Episode!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addBlurToImageView()
+        
         // Affichage du titre de l'épisode dans la navigation bar
-        self.title = episode.name
+        //self.title = episode.name
+        
+        
+        tvShowTitleLabel.text = episode.tvShowName
+        titleLabel.text = episode.name.uppercased()
+
+        if let season = episode.season, let number = episode.number {
+            seasonNumberLabel.text = "Saison \(season) | Ep. \(number)"
+        }
         
         // Affichage de l'image 
         
@@ -40,6 +54,33 @@ class EpisodeDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func addBlurToImageView() {
+        
+        // Création d'un calque avec un flou
+        
+        let blurLayer = CAGradientLayer()
+        
+        let imageViewFrame = imageView.bounds
+        
+        imageView.layer.backgroundColor = UIColor.purple.cgColor
+        
+        // (x, y, width, height)
+        
+        let blurHeight = CGFloat(36.0)
+        
+        // Définition des proprités géométriques
+        blurLayer.frame = CGRect(x: 0.0,
+                                 y: 0.0,
+                                 width: imageViewFrame.width, height: blurHeight)
+        
+        blurLayer.colors = [UIColor.clear.cgColor,
+                            UIColor.white.cgColor]
+        
+        imageView.layer.addSublayer(blurLayer)
+
+        blurLayer.position = CGPoint(x: imageViewFrame.width/2.0, y: imageViewFrame.height-blurHeight)
+        
+    }
 
     /*
     // MARK: - Navigation
